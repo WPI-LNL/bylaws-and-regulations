@@ -1,4 +1,5 @@
-\documentclass[12pt,letterpaper]{book}
+\documentclass[12pt,letterpaper,oneside]{book}
+\usepackage[letterpaper,margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{cleveref}
@@ -10,11 +11,8 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhead[RE,LO]{}
-\fancyhead[LE,RO]{\leftmark}
-\fancyfoot[C]{}
-\fancyfoot[RE,LO]{\today}
-\fancyfoot[LE,RO]{\thepage}
+\fancyhead[R,L]{}
+\fancyhead[C]{\leftmark}
 
 \makeatletter
 \@addtoreset{chapter}{part}
