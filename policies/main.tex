@@ -1,0 +1,38 @@
+\documentclass[a4paper,oneside]{book}
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{2}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\crefformat{chapter}{\S#2#1#3}
+\crefformat{section}{\S#2#1#3} % see manual of cleveref, section 8.2.1
+\crefformat{subsection}{\S#2#1#3}
+\crefformat{subsubsection}{\S#2#1#3}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[R,L]{}
+\fancyhead[C]{\leftmark}
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+
+
+\title{Policy Omnibus}
+\author{WPI Lens and Lights}
+\date{\today}
+
+\begin{document}
+\renewcommand{\chaptername}{Section}
+\maketitle
+\tableofcontents
+\newpage
+\input{event.tex}
+\input{cancellation.tex}
+\input{rain.tex}
+\end{document}
